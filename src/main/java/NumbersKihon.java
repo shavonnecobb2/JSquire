@@ -1,38 +1,40 @@
 import framework.NumbersKihonBase;
 
+import javax.naming.OperationNotSupportedException;
+
 public class NumbersKihon extends NumbersKihonBase {
     @Override
     protected int returnTheMaximumValueOfInt() {
-        throw new UnsupportedOperationException();
+        return
     }
 
     @Override
     protected int returnTheMinimumValueOfInt() {
-        throw new UnsupportedOperationException();
+        return 0;
     }
 
     @Override
     protected int returnTheRemainderOfADividedByB(int a, int b) {
-        throw new UnsupportedOperationException();
+        return Integer.remainderUnsigned(a,b);
     }
 
     @Override
     protected double returnTheMaximumValueOfDouble() {
-        throw new UnsupportedOperationException();
+        return 0;
     }
 
     @Override
     protected double returnTheMinimumValueOfDouble() {
-        throw new UnsupportedOperationException();
+        return 0;
     }
 
     @Override
     protected boolean returnTrueIfAIsNotANumber(double a) {
-        throw new UnsupportedOperationException();
+        return Double.isNaN(a);
     }
 
     @Override
     protected boolean returnTrueIfAIsAnInfinite(double a) {
-        throw new UnsupportedOperationException();
+        return Double.isInfinite(a);
     }
 }
