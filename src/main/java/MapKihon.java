@@ -33,13 +33,9 @@ public class MapKihon extends MapKihonBase {
 
     @Override
     protected int countUniqueWordsInList(List<String> words) {
-        Map<String, Integer> map = new HashMap<>();
+        var map = new HashMap<String, String>();
         for (var word : words) {
-            if (map.containsKey(word)) {
-                map.put(word, map.get(word) +1);
-            } else {
-                map.put(word, 1);
-            }
+            map.put(word, word);
         }
         return map.keySet().size();
     }
