@@ -3,19 +3,25 @@ package kihons;
 import framework.bases.ConsoleKihonBase;
 import framework.exceptions.NotImplementedYetException;
 
+import java.util.Scanner;
+
 public class ConsoleKihon extends ConsoleKihonBase {
     @Override
     protected void writeFooBarToTheConsole() {
-        throw new NotImplementedYetException();
+        System.out.print("FooBar");
     }
 
     @Override
     protected void writeLineFooBarToTheConsole() {
-        throw new NotImplementedYetException();
+        System.out.println("FooBar");
     }
 
     @Override
     protected String readLineFromConsoleAndReturnValue() {
-        throw new NotImplementedYetException();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("What's your name?");
+        String name = scanner.nextLine();
+        return name;
+
     }
 }
